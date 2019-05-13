@@ -38,7 +38,7 @@ class CategoriaController extends Controller
         }
         
         $data->delete();
-        return $this->succes(["objeto eliminado correctamente"]);
+        return Controller::success(["objeto eliminado correctamente"]);
     }
 
     public function listar(){

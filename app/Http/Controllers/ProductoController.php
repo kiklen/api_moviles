@@ -22,7 +22,7 @@ class ProductoController extends Controller
             return $this->error($errores);
         }
         $producto = Producto::create($datos);
-        $producto->categoria = $producto->categoria;
+        $producto->categoria = $producto->categoria->nombre;
         $producto->proveedor = $producto->proveedor;
         return $this->success($producto);
     }
